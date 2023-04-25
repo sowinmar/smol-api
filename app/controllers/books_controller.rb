@@ -30,12 +30,6 @@ class BooksController < ApplicationController
     head :no_content
   end
 
-  # GET /books/available
-  def show_available
-    @books = Book.where(is_available: true)
-    json_response(@books)
-  end
-
   private
 
   def book_params
